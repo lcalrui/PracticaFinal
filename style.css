@@ -1,7 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
 body {
     background-color: rgb(3, 16, 44);
     margin: 0;
     padding: 0;
+    font-family: 'Quicksand';
+}
+
+h1, h2, h3 {
+    color: rgb(207, 152, 12);
+}
+
+h2 {
+    font-size: 27px;
 }
 
 header {
@@ -17,7 +28,7 @@ header {
 
     header div.top-row h1 {
         text-align: center;
-        color: rgb(207, 152, 12);
+        font-size: 40px;
     }
 
 
@@ -52,7 +63,7 @@ header {
             left: 0;
             width: 100%;
             height: 2px;
-            background-color: rgb(200, 166, 79);
+            background-color: #c8a64f;
             transform: scaleX(0);
             transform-origin: left; 
             transition: transform 0.3s ease;
@@ -68,26 +79,65 @@ main {
     padding: 0px 30px;
     font-size: large;
     text-align: justify;
+    margin: 0 10%;
 }
-    main div{
-        text-align: center;
+
+    .site div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 
-    main figure {
-        padding: 0;
-        margin: 0;
-        display: inline-block;
+        .site div figure {
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+            width: calc(50% - 10px);
+            box-sizing: border-box;
+        }
+
+            .site div figure img {
+                max-width: 100%;
+            }
+
+            .site div figure figcaption {
+                font-size: 13px;
+                text-align: right;
+                font-style: italic;
+            }
+
+    main section li {
+        line-height: 25px;
+    }
+    
+    .equipos-clasificados {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 
-    main figure img {
+     table {
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        width: 45%; 
         max-width: 100%;
     }
 
-    main figure figcaption {
-        font-size: 13px;
-        text-align: right;
-        font-style: italic;
-    }
+        table caption {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        table th, table td {
+            border: 2px solid #645329;
+            padding: 3px;
+        }
+
+            table td img {
+                height: 13px;
+                margin-right: 10px;
+            }
 
 footer {
     background-color: rgb(0, 0, 0);
@@ -100,5 +150,194 @@ footer {
 
     img.icon {
         max-height: 35px;
+        width: auto;
         padding: 0px 5px;
     }
+
+.world-champions img {
+    max-width: 100%;
+}
+
+.player{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin: 40px 0px;
+}
+
+.player img{
+    width: 40%;
+    height: auto;
+}
+
+.centrado {
+    text-align: center;
+}
+
+.semis {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.verde {
+    background-color: rgba(0, 255, 0, 0.233);
+}
+
+.rojo {
+    background-color: rgba(255, 0, 0, 0.418);
+}
+
+.azul {
+    background-color: rgba(0, 0, 255, 0.418);
+}
+
+#adidas-arena {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+    #adidas-arena figure, #adidas-arena div {
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        width: calc(50% - 15px);
+        box-sizing: border-box;
+    }
+
+        #adidas-arena figure img {
+            width: 100%;
+        }
+
+        #adidas-arena figcaption {
+            font-size: 13px;
+            text-align: right;
+            font-style: italic;
+        }
+    
+        #adidas-arena div iframe {
+            width: 100%;
+            height: 95%;
+        }
+
+.resultado-semis{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.final iframe {
+    border-radius: 10px;
+    width: 40%;
+    height: 300px;
+}
+
+#final {
+    font-size: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(255, 255, 255, 0.5);
+}
+
+audio {
+    width: 100%;
+}
+
+.contact-form {
+    padding: 15px;
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="tel"],
+.contact-form textarea,
+.contact-form input[type="radio"],
+.contact-form input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: rgba(34, 20, 163, 0.192);
+    border: 1px solid rgb(253, 220, 142);
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.contact-form label {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(253, 220, 142);
+    margin: 21px 0;
+}
+
+.contact-form input[type="submit"] {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.contact-form .radio-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.contact-form input[type="radio"] {
+    width: auto;
+    margin: 0;
+}
+
+.contact-form .radio-group label {
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .contact-form input[type="submit"] {
+        width: auto;
+    }
+}
+
+@media (max-width: 1400px) {
+    .player img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .player img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .site div figure {
+        width: 100%;
+    }
+}
+
+@media (max-width: 786px) {
+    #adidas-arena figure, #adidas-arena div {
+        width: 100%;
+    }
+
+    .final iframe {
+        width: 100%;
+        height: 150px;
+    }
+
+}
